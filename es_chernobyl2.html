@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetto Chernobyl - Galleria e Mappa</title>
+  <!-- Aggiungiamo il foglio di stile per la mappa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🌿 Progetto Chernobyl</h1>
+    <p>Galleria e Mappa dell'evoluzione naturale post-incidente</p>
+  </header>
+
+  <!-- Galleria di immagini -->
+  <section class="slider-gallery">
+    <h2>📸 Galleria della Trasformazione</h2>
+    <div class="slider-container">
+      <div class="slider-box" id="slider-box">
+        <!-- Immagini e descrizioni dinamiche saranno inserite qui -->
+        <div class="slide active">
+          <img src="img/chernobyl_1.jpg" alt="Immagine 1">
+          <div class="slide-text">
+            <h3>Immagine 1</h3>
+            <p>Immagini in True Color 4 giorni prima dell'incidente</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/chernobyl_2.jpg" alt="Immagine 2">
+          <div class="slide-text">
+            <h3>Immagine 2</h3>
+            <p>Immagine con filtro NDVI 4 giorni prima dell'incidente </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/chernobyl_3.jpg" alt="Immagine 3">
+          <div class="slide-text">
+            <h3>Immagine 3</h3>
+            <p>Immagine della situazione di chernobyl 3 giorni dopo l'incidente</p>
+          </div>
+        </div>
+
+        <!-- Aggiungi più immagini qui fino a 20 o più -->
+        <div class="slide">
+          <img src="img/chernobyl_4.jpg" alt="Immagine 4">
+          <div class="slide-text">
+            <h3>Immagine 4</h3>
+            <p>Immagine della situazione della vegetazione 3 giorni dopo l'incidente</p>
+          </div>
+        </div>
+        
+		<div class="slide">
+          <img src="img/chernobyl_5.jpg" alt="Immagine 5">
+          <div class="slide-text">
+            <h3>Immagine 5</h3>
+            <p>1986: La vegetazione subì una devastazione immediata a causa delle radiazioni. 
+			Molte piante, in particolare gli alberi,
+			morirono rapidamente. La flora locale non riuscì a resistere all'immediata contaminazione.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_6.jpg" alt="Immagine 6">
+          <div class="slide-text">
+            <h3>Immagine 6</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_7.jpg" alt="Immagine 7">
+          <div class="slide-text">
+            <h3>Immagine 7</h3>
+            <p>Nel 1987, l'ambiente continuò a soffrire. Le piante sopravvissute nel 1986, 
+			infatti, cominciarono a morire definitivamente a causa del continuo stress radiologico, 
+			riducendo la vegetazione visibile. La crescita di specie più resistenti, come muschi e felci, 
+			iniziò, ma queste piante erano meno visibili rispetto agli alberi, 
+			dando l'impressione di una minore presenza di vegetazione.</p>
+			</div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_8.jpg" alt="Immagine 8">
+          <div class="slide-text">
+            <h3>Immagine 8</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_9.jpg" alt="Immagine 9">
+          <div class="slide-text">
+            <h3>Immagine 9</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_10.jpg" alt="Immagine 10">
+          <div class="slide-text">
+            <h3>Immagine 10</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_11.jpg" alt="Immagine 11">
+          <div class="slide-text">
+            <h3>Immagine 11</h3>
+            <p>La vegetazione è ancora devastata dal continuo stress radiologico</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_12.jpg" alt="Immagine 12">
+          <div class="slide-text">
+            <h3>Immagine 12</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_13.jpg" alt="Immagine 13">
+          <div class="slide-text">
+            <h3>Immagine 13</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_14.jpg" alt="Immagine 14">
+          <div class="slide-text">
+            <h3>Immagine 14</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_15.jpg" alt="Immagine 15">
+          <div class="slide-text">
+            <h3>Immagine 15</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_16.jpg" alt="Immagine 16">
+          <div class="slide-text">
+            <h3>Immagine 16</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_17.jpg" alt="Immagine 17">
+          <div class="slide-text">
+            <h3>Immagine 17</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_18.jpg" alt="Immagine 18">
+          <div class="slide-text">
+            <h3>Immagine 18</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_19.jpg" alt="Immagine 19">
+          <div class="slide-text">
+            <h3>Immagine 19</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_20.jpg" alt="Immagine 20">
+          <div class="slide-text">
+            <h3>Immagine 20</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_21.jpg" alt="Immagine 21">
+          <div class="slide-text">
+            <h3>Immagine 21</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		<div class="slide">
+          <img src="img/chernobyl_22.jpg" alt="Immagine 22">
+          <div class="slide-text">
+            <h3>Immagine 22</h3>
+            <p>Descrizione dell'immagine 4: Nuova vegetazione che cresce.</p>
+          </div>
+        </div>
+		
+		
+
+      </div>
+
+      <!-- Pulsanti per navigare tra le immagini -->
+      <div class="nav-buttons">
+        <button onclick="changeSlide(-1)">⬅️ Indietro</button>
+        <button onclick="changeSlide(1)">Avanti ➡️</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mappa interattiva -->
+  <section>
+    <h2>🗺️ Mappa di Chernobyl</h2>
+    <div id="map"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Creato da [Il Tuo Nome] • 2025</p>
+  </footer>
+
+  <!-- Aggiungiamo i JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    let currentIndex = 0;
+
+    // Funzione per caricare la slide
+    function loadSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    // Funzione per cambiare le immagini
+    function changeSlide(direction) {
+      const slides = document.querySelectorAll('.slide');
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      loadSlide(currentIndex);
+    }
+
+    // Carica la prima immagine
+    window.onload = () => loadSlide(currentIndex);
+
+    // Mappa interattiva di Chernobyl
+    const map = L.map('map').setView([51.2769, 30.2218], 10);  // Posizione di Chernobyl
+
+    // Aggiungere la mappa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Aggiungere un pin sulla centrale nucleare di Chernobyl
+    L.marker([51.2769, 30.2218]).addTo(map)
+      .bindPopup("<b>Centrali Nucleare di Chernobyl</b>")
+      .openPopup();
+  </script>
+
+</body>
+</html>
