@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetto Chernobyl</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progetto Chernobyl - Sezioni con Slider</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     body {
@@ -11,62 +11,46 @@
       margin: 0;
       padding: 0;
     }
-
-    header, footer {
-      text-align: center;
-      padding: 1em;
-      background-color: #f0f0f0;
+    header, section {
+      padding: 20px;
     }
-
     section {
-      padding: 2em;
+      border-bottom: 1px solid #ddd;
     }
-
-    h2 {
-      margin-bottom: 1em;
-    }
-
     .slider-container {
       position: relative;
+      max-width: 600px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 10px;
       overflow: hidden;
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
     }
-
-    .slide-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
     .slide {
-      min-width: 100%;
-      box-sizing: border-box;
+      display: none;
+      text-align: center;
     }
-
+    .slide.active {
+      display: block;
+    }
     .slide img {
       width: 100%;
-      display: block;
-      border-radius: 10px;
+      height: auto;
     }
-
     .nav-buttons {
       text-align: center;
-      margin-top: 10px;
+      margin: 10px;
     }
-
     .nav-buttons button {
-      padding: 0.5em 1em;
-      margin: 0 0.5em;
-      font-size: 16px;
+      padding: 8px 16px;
+      margin: 0 5px;
       cursor: pointer;
     }
-
     #map {
       height: 400px;
       width: 100%;
-      border-radius: 10px;
-      margin-top: 1em;
+    }
+    h2 {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -74,97 +58,77 @@
 
 <header>
   <h1>Progetto Chernobyl</h1>
-  <p>Esplora l'incidente e i cambiamenti ambientali</p>
+  <p>Analisi dell'incidente, degli effetti ambientali e visualizzazione su mappa.</p>
 </header>
 
 <!-- Sezione 1: Incidente -->
 <section>
-  <h2>Incidente</h2>
-  <div class="slider-container" id="slider-incidente">
-    <div class="slide-track">
-      <div class="slide"><img src="img/incidente/1.jpg" alt="Incidente 1"></div>
-      <div class="slide"><img src="img/incidente/2.jpg" alt="Incidente 2"></div>
-      <div class="slide"><img src="img/incidente/3.jpg" alt="Incidente 3"></div>
+  <h2>Incidente di Chernobyl</h2>
+  <p>Il disastro nucleare di Chernobyl avvenne il 26 aprile 1986 presso la centrale nucleare Vladimir Il'ič Lenin. Durante un test di sicurezza, il reattore 4 esplose, rilasciando enormi quantità di radiazioni nell’atmosfera.</p>
+  <div class="slider-container" data-slider="1">
+    <div class="slide active"><img src="img/incidente_1.jpg" alt="Incidente 1"><p>Esplosione del reattore 4 nella notte dell’incidente.</p></div>
+    <div class="slide"><img src="img/incidente_2.jpg" alt="Incidente 2"><p>Squadre di emergenza al lavoro nei giorni successivi.</p></div>
+    <div class="nav-buttons">
+      <button onclick="changeSlide(-1, 1)">Indietro</button>
+      <button onclick="changeSlide(1, 1)">Avanti</button>
     </div>
-  </div>
-  <div class="nav-buttons">
-    <button onclick="prevSlide('slider-incidente')">←</button>
-    <button onclick="nextSlide('slider-incidente')">→</button>
   </div>
 </section>
 
-<!-- Sezione 2: Evoluzione Naturale -->
+<!-- Sezione 2: Cambiamenti della Natura -->
 <section>
-  <h2>Evoluzione della Natura</h2>
-  <div class="slider-container" id="slider-natura">
-    <div class="slide-track">
-      <div class="slide"><img src="img/natura/1.jpg" alt="Natura 1"></div>
-      <div class="slide"><img src="img/natura/2.jpg" alt="Natura 2"></div>
-      <div class="slide"><img src="img/natura/3.jpg" alt="Natura 3"></div>
+  <h2>Cambiamenti della Natura</h2>
+  <p>Dopo il disastro, la natura nella zona di esclusione ha subito mutazioni sorprendenti. Alcune aree sono diventate rifugi per la fauna selvatica, mentre altre mostrano gli effetti delle radiazioni sull’ecosistema.</p>
+  <div class="slider-container" data-slider="2">
+    <div class="slide active"><img src="img/natura_1.jpg" alt="Natura 1"><p>Rinascita della fauna in aree isolate.</p></div>
+    <div class="slide"><img src="img/natura_2.jpg" alt="Natura 2"><p>Alberi deformati nelle zone più contaminate.</p></div>
+    <div class="nav-buttons">
+      <button onclick="changeSlide(-1, 2)">Indietro</button>
+      <button onclick="changeSlide(1, 2)">Avanti</button>
     </div>
-  </div>
-  <div class="nav-buttons">
-    <button onclick="prevSlide('slider-natura')">←</button>
-    <button onclick="nextSlide('slider-natura')">→</button>
   </div>
 </section>
 
-<!-- Sezione 3: Bacino -->
+<!-- Sezione 3: Bacino vicino al reattore -->
 <section>
-  <h2>Bacino vicino al reattore</h2>
-  <div class="slider-container" id="slider-bacino">
-    <div class="slide-track">
-      <div class="slide"><img src="img/bacino/1.jpg" alt="Bacino 1"></div>
-      <div class="slide"><img src="img/bacino/2.jpg" alt="Bacino 2"></div>
+  <h2>Bacino vicino al Reattore</h2>
+  <p>Il bacino di raffreddamento situato vicino alla centrale aveva lo scopo di raffreddare i reattori. Dopo l’incidente, è divenuto una zona altamente contaminata, ma ora ospita forme di vita resistenti alla radiazione.</p>
+  <div class="slider-container" data-slider="3">
+    <div class="slide active"><img src="img/bacino_1.jpg" alt="Bacino 1"><p>Vista del bacino nei primi anni dopo il disastro.</p></div>
+    <div class="slide"><img src="img/bacino_2.jpg" alt="Bacino 2"><p>Condizioni attuali del bacino e della vegetazione circostante.</p></div>
+    <div class="nav-buttons">
+      <button onclick="changeSlide(-1, 3)">Indietro</button>
+      <button onclick="changeSlide(1, 3)">Avanti</button>
     </div>
-  </div>
-  <div class="nav-buttons">
-    <button onclick="prevSlide('slider-bacino')">←</button>
-    <button onclick="nextSlide('slider-bacino')">→</button>
   </div>
 </section>
 
 <!-- Sezione 4: Mappa -->
 <section>
   <h2>Mappa Interattiva di Chernobyl</h2>
+  <p>La mappa mostra la posizione della centrale e delle aree circostanti, incluse Pripyat e la zona di esclusione.</p>
   <div id="map"></div>
 </section>
 
-<footer>
-  <p>Creato da Andrea Todeschini, Tommaso Mirandola, Riccardo Sartorelli • 2025</p>
-</footer>
-
-<!-- SCRIPT SLIDER -->
-<script>
-  const sliders = {};
-
-  function nextSlide(id) {
-    const track = document.querySelector(`#${id} .slide-track`);
-    const slides = document.querySelectorAll(`#${id} .slide`);
-    sliders[id] = (sliders[id] ?? 0) + 1;
-    if (sliders[id] >= slides.length) sliders[id] = 0;
-    track.style.transform = `translateX(-${sliders[id] * 100}%)`;
-  }
-
-  function prevSlide(id) {
-    const track = document.querySelector(`#${id} .slide-track`);
-    const slides = document.querySelectorAll(`#${id} .slide`);
-    sliders[id] = (sliders[id] ?? 0) - 1;
-    if (sliders[id] < 0) sliders[id] = slides.length - 1;
-    track.style.transform = `translateX(-${sliders[id] * 100}%)`;
-  }
-</script>
-
-<!-- SCRIPT MAPPA -->
+<!-- Script -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
+  function changeSlide(direction, sliderId) {
+    const container = document.querySelector(`.slider-container[data-slider="${sliderId}"]`);
+    const slides = container.querySelectorAll('.slide');
+    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+    slides[activeIndex].classList.remove('active');
+    activeIndex = (activeIndex + direction + slides.length) % slides.length;
+    slides[activeIndex].classList.add('active');
+  }
+
+  // Mappa interattiva
   const map = L.map('map').setView([51.2769, 30.2218], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
-
   L.marker([51.3890, 30.0999]).addTo(map)
-    .bindPopup("<b>Centrale Nucleare di Chernobyl</b>")
+    .bindPopup("Centrale Nucleare di Chernobyl")
     .openPopup();
 </script>
 
