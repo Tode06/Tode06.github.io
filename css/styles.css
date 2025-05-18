@@ -54,19 +54,16 @@ h2 {
   top: 50%;
   width: 50px;
   height: 50px;
-  margin-top: -25px; /* centro verticale */
-  color: white;
-  font-weight: bold;
-  font-size: 28px;
-  border: none;
-  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  margin-top: -25px;
+  background-color: #e3e9f3;  /* chiaro e soft */
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(53, 122, 189, 0.5);
-  user-select: none;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #357ABD;  /* bordo blu delicato */
+  box-shadow: 0 2px 6px rgba(53, 122, 189, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  user-select: none;
 }
 
 .prev {
@@ -78,9 +75,20 @@ h2 {
 }
 
 .prev:hover, .next:hover {
-  background: linear-gradient(135deg, #357ABD, #2c5ca9);
-  box-shadow: 0 6px 12px rgba(44, 92, 169, 0.7);
+  background-color: #357ABD;    /* blu pieno */
+  border-color: #255a99;
+  box-shadow: 0 4px 12px rgba(37, 90, 153, 0.5);
 }
+
+.prev:hover svg, .next:hover svg {
+  stroke: white;
+}
+
+.prev svg, .next svg {
+  stroke: #357ABD;  /* colore freccia blu */
+  transition: stroke 0.3s ease;
+}
+
 
 /* Nascondi vecchie gallery */
 .gallery {
