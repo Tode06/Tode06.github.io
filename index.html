@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Progetto Chernobyl - Evoluzione post-incidente</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -14,18 +14,18 @@
   <p>Evoluzione ambientale e storica post-incidente</p>
 </header>
 
-<!-- Sezione 1: Spiegazione dell'incidente -->
+<!-- Sezione 1 -->
 <section>
   <h2>Spiegazione dell'incidente</h2>
   <p>Il disastro di Chernobyl avvenne il 26 aprile 1986 presso il reattore 4 della centrale nucleare. Una serie di errori umani e problemi strutturali causarono un'esplosione che liberò una grande quantità di materiale radioattivo nell'atmosfera.</p>
 
   <div class="slider">
     <div class="slide active">
-      <img src="img/chernobyl_1.jpg" alt="4 giorni prima dell'incidente">
+      <img src="img/chernobyl_1.jpg" alt="4 giorni prima dell'incidente" />
       <div class="description">4 giorni prima dell'incidente</div>
     </div>
     <div class="slide">
-      <img src="img/chernobyl_3.jpg" alt="3 giorni dopo l'incidente">
+      <img src="img/chernobyl_3.jpg" alt="3 giorni dopo l'incidente" />
       <div class="description">3 giorni dopo l'incidente</div>
     </div>
 
@@ -34,34 +34,75 @@
   </div>
 </section>
 
-<!-- Sezione 2: Cambiamenti della natura nel tempo -->
+<!-- Sezione 2 -->
 <section>
   <h2>Cambiamenti nella natura nel tempo</h2>
   <p>La flora e la fauna della zona di esclusione hanno subito gravi danni iniziali, seguiti da una lenta ma sorprendente rigenerazione negli anni.</p>
-  <div class="gallery">
-    <img src="img/chernobyl_5.jpg" alt="1986 - Devastazione vegetazione">
-    <img src="img/chernobyl_7.jpg" alt="1987 - Muschi e felci resistenti">
-    <img src="img/chernobyl_13.jpg" alt="1991 - Segnali di rigenerazione">
-    <img src="img/chernobyl_16.jpg" alt="2000 - Ripresa della biodiversità">
-    <img src="img/chernobyl_18.jpg" alt="2013 - Ecosistema selvaggio">
-    <img src="img/chernobyl_22.jpg" alt="2025 - Foresta complessa e viva">
+
+  <div class="slider">
+    <div class="slide active">
+      <img src="img/chernobyl_5.jpg" alt="1986 - Devastazione vegetazione" />
+      <div class="description">1986 - Devastazione vegetazione</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_7.jpg" alt="1987 - Muschi e felci resistenti" />
+      <div class="description">1987 - Muschi e felci resistenti</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_13.jpg" alt="1991 - Segnali di rigenerazione" />
+      <div class="description">1991 - Segnali di rigenerazione</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_16.jpg" alt="2000 - Ripresa della biodiversità" />
+      <div class="description">2000 - Ripresa della biodiversità</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_18.jpg" alt="2013 - Ecosistema selvaggio" />
+      <div class="description">2013 - Ecosistema selvaggio</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_22.jpg" alt="2025 - Foresta complessa e viva" />
+      <div class="description">2025 - Foresta complessa e viva</div>
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </div>
 </section>
 
-<!-- Sezione 3: Il bacino vicino al reattore -->
+<!-- Sezione 3 -->
 <section>
   <h2>Il bacino vicino al reattore</h2>
   <p>Il bacino di raffreddamento ha subito contaminazioni pesanti, ma ha anche mostrato adattamenti ecologici significativi nel tempo.</p>
-  <div class="gallery">
-    <img src="img/chernobyl_14.jpg" alt="1993 - Deformazioni nella fauna acquatica">
-    <img src="img/chernobyl_15.jpg" alt="2000 - Segni di recupero">
-    <img src="img/chernobyl_17.jpg" alt="2013 - Abbassamento del livello dell'acqua">
-    <img src="img/chernobyl_20.jpg" alt="2017 - Rischio risospensione contaminanti">
-    <img src="img/chernobyl_21.jpg" alt="Recupero vegetazione acquatica">
+
+  <div class="slider">
+    <div class="slide active">
+      <img src="img/chernobyl_14.jpg" alt="1993 - Deformazioni nella fauna acquatica" />
+      <div class="description">1993 - Deformazioni nella fauna acquatica</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_15.jpg" alt="2000 - Segni di recupero" />
+      <div class="description">2000 - Segni di recupero</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_17.jpg" alt="2013 - Abbassamento del livello dell'acqua" />
+      <div class="description">2013 - Abbassamento del livello dell'acqua</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_20.jpg" alt="2017 - Rischio risospensione contaminanti" />
+      <div class="description">2017 - Rischio risospensione contaminanti</div>
+    </div>
+    <div class="slide">
+      <img src="img/chernobyl_21.jpg" alt="Recupero vegetazione acquatica" />
+      <div class="description">Recupero vegetazione acquatica</div>
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </div>
 </section>
 
-<!-- Sezione 4: Mappa interattiva -->
+<!-- Sezione 4: Mappa -->
 <section>
   <h2>Mappa di Chernobyl</h2>
   <div id="map" style="height: 400px;"></div>
@@ -72,6 +113,7 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/slider.js"></script>
 <script>
   const map = L.map('map').setView([51.2769, 30.2218], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -81,44 +123,6 @@
     .bindPopup("Centrale Nucleare di Chernobyl")
     .openPopup();
 </script>
-
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-
-  header, section, footer {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 900px;
-  }
-
-  h2 {
-    margin-top: 2em;
-  }
-
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 1em;
-  }
-
-  .gallery img {
-    width: calc(33.333% - 10px);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-
-  @media (max-width: 768px) {
-    .gallery img {
-      width: 100%;
-    }
-  }
-</style>
 
 </body>
 </html>
