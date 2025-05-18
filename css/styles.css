@@ -52,47 +52,6 @@ h2 {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  border: none;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  user-select: none;
-  transition: background-color 0.3s ease;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Nascondi vecchie gallery */
-.gallery {
-  display: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .slider {
-    max-width: 100%;
-  }
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
   width: 50px;
   height: 50px;
   margin-top: -25px; /* centro verticale */
@@ -122,4 +81,17 @@ h2 {
   background: linear-gradient(135deg, #357ABD, #2c5ca9);
   box-shadow: 0 6px 12px rgba(44, 92, 169, 0.7);
 }
+
+/* Nascondi vecchie gallery */
+.gallery {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider {
+    max-width: 100%;
+  }
+}
+
 
