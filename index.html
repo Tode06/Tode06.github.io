@@ -3,310 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetto Chernobyl - Galleria e Mappa</title>
-  <!-- Aggiungiamo il foglio di stile per la mappa -->
+  <title>Progetto Chernobyl - Evoluzione post-incidente</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="css/styles.css">
-  
 </head>
 <body>
 
+<header>
+  <h1>Progetto Chernobyl</h1>
+  <p>Evoluzione ambientale e storica post-incidente</p>
+</header>
 
-  <!-- Header -->
-  <header>
-    <h1>Progetto Chernobyl</h1>
-    <p>Galleria e Mappa dell'evoluzione naturale post-incidente</p>
-  </header>
-
-<section class="legenda">
-  <h2>🗺️ Legenda dei Colori</h2>
-  <p>Questa immagine mostra la legenda usata per interpretare i colori delle mappe e delle immagini satellitari relative alla vegetazione e alla zona di esclusione.</p>
-  <img src="img/legenda_vegetazione.png" alt="Legenda della vegetazione" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 1rem;">
+<!-- Sezione 1: Spiegazione dell'incidente -->
+<section>
+  <h2>Spiegazione dell'incidente</h2>
+  <p>Il disastro di Chernobyl avvenne il 26 aprile 1986 presso il reattore 4 della centrale nucleare. Una serie di errori umani e problemi strutturali causarono un'esplosione che liberò una grande quantità di materiale radioattivo nell'atmosfera.</p>
+  <div class="gallery">
+    <img src="img/chernobyl_1.jpg" alt="4 giorni prima dell'incidente">
+    <img src="img/chernobyl_3.jpg" alt="3 giorni dopo l'incidente">
+  </div>
 </section>
-  <!-- Galleria di immagini -->
-  <section class="slider-gallery">
-    <h2>Galleria della Trasformazione</h2>
-    <div class="slider-container">
-      <div class="slider-box" id="slider-box">
-        <!-- Immagini e descrizioni dinamiche saranno inserite qui -->
-        <div class="slide active">
-          <img src="img/chernobyl_1.jpg" alt="Immagine 1">
-          <div class="slide-text">
-            <h3>Immagine 1</h3>
-            <p>Immagini in True Color 4 giorni prima dell'incidente</p>
-          </div>
-        </div>
 
-        <div class="slide">
-          <img src="img/chernobyl_2.jpg" alt="Immagine 2">
-          <div class="slide-text">
-            <h3>Immagine 2</h3>
-            <p>Immagine con filtro NDVI 4 giorni prima dell'incidente </p>
-          </div>
-        </div>
+<!-- Sezione 2: Cambiamenti della natura nel tempo -->
+<section>
+  <h2>Cambiamenti nella natura nel tempo</h2>
+  <p>La flora e la fauna della zona di esclusione hanno subito gravi danni iniziali, seguiti da una lenta ma sorprendente rigenerazione negli anni.</p>
+  <div class="gallery">
+    <img src="img/chernobyl_5.jpg" alt="1986 - Devastazione vegetazione">
+    <img src="img/chernobyl_7.jpg" alt="1987 - Muschi e felci resistenti">
+    <img src="img/chernobyl_13.jpg" alt="1991 - Segnali di rigenerazione">
+    <img src="img/chernobyl_16.jpg" alt="2000 - Ripresa della biodiversità">
+    <img src="img/chernobyl_18.jpg" alt="2013 - Ecosistema selvaggio">
+    <img src="img/chernobyl_22.jpg" alt="2025 - Foresta complessa e viva">
+  </div>
+</section>
 
-        <div class="slide">
-          <img src="img/chernobyl_3.jpg" alt="Immagine 3">
-          <div class="slide-text">
-            <h3>Immagine 3</h3>
-            <p>Immagine della situazione di chernobyl 3 giorni dopo l'incidente</p>
-          </div>
-        </div>
+<!-- Sezione 3: Il bacino vicino al reattore -->
+<section>
+  <h2>Il bacino vicino al reattore</h2>
+  <p>Il bacino di raffreddamento ha subito contaminazioni pesanti, ma ha anche mostrato adattamenti ecologici significativi nel tempo.</p>
+  <div class="gallery">
+    <img src="img/chernobyl_14.jpg" alt="1993 - Deformazioni nella fauna acquatica">
+    <img src="img/chernobyl_15.jpg" alt="2000 - Segni di recupero">
+    <img src="img/chernobyl_17.jpg" alt="2013 - Abbassamento del livello dell'acqua">
+    <img src="img/chernobyl_20.jpg" alt="2017 - Rischio risospensione contaminanti">
+    <img src="img/chernobyl_21.jpg" alt="Recupero vegetazione acquatica">
+  </div>
+</section>
 
-        <!-- Aggiungi più immagini qui fino a 20 o più -->
-        <div class="slide">
-          <img src="img/chernobyl_4.jpg" alt="Immagine 4">
-          <div class="slide-text">
-            <h3>Immagine 4</h3>
-            <p>Immagine della situazione della vegetazione 3 giorni dopo l'incidente</p>
-          </div>
-        </div>
-        
-		<div class="slide">
-          <img src="img/chernobyl_5.jpg" alt="Immagine 5">
-          <div class="slide-text">
-            <h3>Immagine 5</h3>
-            <p>1986: La vegetazione subì una devastazione immediata a causa delle radiazioni. 
-			Molte piante, in particolare gli alberi,
-			morirono rapidamente. La flora locale non riuscì a resistere all'immediata contaminazione.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_6.jpg" alt="Immagine 6">
-          <div class="slide-text">
-            <h3>Immagine 6</h3>
-            <p> A Sei mesi dopo l'incidente di Chernobyl, la vegetazione nelle vicinanze subiva ancora gravi danni a causa delle radiazioni. 
-		    Le piante, comprese le foreste, mostrarono segni di stress, con foglie secche e morte. 
-		    La biodiversità vegetale diminuì drasticamente, e molte piante non riuscirono a sopravvivere.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_7.jpg" alt="Immagine 7">
-          <div class="slide-text">
-            <h3>Immagine 7</h3>
-            <p>Nel 1987, l'ambiente continuò a soffrire. Le piante sopravvissute nel 1986, 
-			infatti, cominciarono a morire definitivamente a causa del continuo stress radiologico, 
-			riducendo la vegetazione visibile. La crescita di specie più resistenti, come muschi e felci, 
-			iniziò, ma queste piante erano meno visibili rispetto agli alberi, 
-			dando l'impressione di una minore presenza di vegetazione.</p>
-			</div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_8.jpg" alt="Immagine 8">
-          <div class="slide-text">
-            <h3>Immagine 8</h3>
-            <p>Nel 1987, la flora di Chernobyl mostrava gravi danni a causa del disastro nucleare.
-		    Nella Foresta Rossa, gli alberi erano morti e rossastri per le radiazioni intense. 
-		    La vegetazione nelle aree circostanti presentava crescita rallentata, mutazioni e ridotta biodiversità.
-		    Solo alcune specie erbacee e resistenti mostravano segni di sopravvivenza.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_9.jpg" alt="Immagine 9">
-          <div class="slide-text">
-            <h3>Immagine 9</h3>
-            <p>Un anno dopo l'incidente di Chernobyl, la fauna terrestre nella zona di esclusione era gravemente colpita dalla contaminazione radioattiva. 
-		    Mammiferi come cervi, alci e cinghiali mostravano deformazioni fisiche e una ridotta capacità riproduttiva. 
-		    I carnivori, come volpi e lupi, subivano un aumento della mortalità. Anche gli uccelli presentavano anomalie. Gli animali, sebbene danneggiati, 
-		    cercavano di adattarsi alle nuove condizioni, 
-		    ma la biodiversità era fortemente ridotta e la salute complessiva della fauna compromessa.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_10.jpg" alt="Immagine 10">
-          <div class="slide-text">
-            <h3>Immagine 10</h3>
-            <p>La vegetazione è ancora devastata dal continuo stress radiologico</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_11.jpg" alt="Immagine 11">
-          <div class="slide-text">
-            <h3>Immagine 11</h3>
-            <p>La fauna circostante è ancora segnata dallo stress radioattivo aumentando la mortalita</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_12.jpg" alt="Immagine 12">
-          <div class="slide-text">
-            <h3>Immagine 12</h3>
-            <p>Le radiazioni continuano a provocare un stress sia per la fauna che per la flora portando a una crsi ecologica</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_13.jpg" alt="Immagine 13">
-          <div class="slide-text">
-            <h3>Immagine 13</h3>
-            <p>Nel 1991 la vegetazione a Chernobyl mostrava segni di rigenerazione: la Foresta Rossa restava danneggiata, 
-		    mentre aree più distanti evidenziavano recupero con piante pionieristiche e giovani alberi. 
-		    La biodiversità era ancora ridotta, ma alcune specie resistenti stavano colonizzando l’area, 
-		    segnando un lento adattamento all’ambiente radioattivo.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_14.jpg" alt="Immagine 14">
-          <div class="slide-text">
-            <h3>Immagine 14</h3>
-            <p>Nel 1993, la fauna acquatica del bacino di raffreddamento di Chernobyl era gravemente compromessa dalla contaminazione radioattiva.
-		    Molti pesci e altri organismi mostravano deformazioni, disturbi riproduttivi e anomalie fisiche. 
-		    Nonostante la bassa biodiversità, alcune specie riuscivano ad adattarsi, ma gli effetti della radiazione restavano evidenti.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_15.jpg" alt="Immagine 15">
-          <div class="slide-text">
-            <h3>Immagine 15</h3>
-            <p>Nel 2000, il bacino di raffreddamento di Chernobyl era ancora contaminato da isotopi radioattivi, 
-		    con segni di recupero ecologico. La vegetazione cresceva abbondante, ma la fauna acquatica era colpita da deformazioni.
-		    L'area, ormai inutilizzata per il raffreddamento,
-		    fungeva da barriera contro la diffusione della contaminazione.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_16.jpg" alt="Immagine 16">
-          <div class="slide-text">
-            <h3>Immagine 16</h3>
-            <p>Nel 2000 la vegetazione a Chernobyl mostrava una notevole ripresa: foreste in espansione, specie adattate alla radioattività e aumento della biodiversità.
-		    La Foresta Rossa era ancora segnata ma parzialmente ricoperta da piante pioniere.
-		    L’assenza dell’uomo aveva favorito la rigenerazione naturale e nuovi equilibri ecologici stavano emergendo.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_17.jpg" alt="Immagine 17">
-          <div class="slide-text">
-            <h3>Immagine 17</h3>
-            <p>Nel 2013, il bacino di raffreddamento di Chernobyl era in fase di disattivazione.
-		    Le pompe che lo alimentavano furono spente, avviando l’abbassamento del livello dell’acqua. La contaminazione da radionuclidi, come Cesio-137 e Stronzio-90,
-		    era principalmente confinata nei sedimenti. Studi ambientali indicavano un calo della radioattività nelle acque.
-		    C’erano preoccupazioni per la possibile dispersione di contaminanti, ma con monitoraggi e misure adeguate, i rischi risultavano gestibili.
-		    Il bacino era destinato a prosciugarsi naturalmente.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_18.jpg" alt="Immagine 18">
-          <div class="slide-text">
-            <h3>Immagine 18</h3>
-            <p>Nel 2013 la vegetazione a Chernobyl era fitta e in espansione. Alberi maturi coprivano strutture umane,
-		    la biodiversità cresceva e molte piante mostravano adattamenti sorprendenti. La natura stava trasformando l’area contaminata in una riserva selvaggia, 
-		    con un equilibrio ecologico influenzato dall’assenza dell’uomo e dalla resilienza biologica.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_19.jpg" alt="Immagine 19">
-          <div class="slide-text">
-            <h3>Immagine 19</h3>
-            <p>Nel 2015, Chernobyl era in fase di transizione: si completavano i lavori per il Nuovo Confinamento Sicuro del reattore 4, fondamentale per contenere la radioattività.
-		    L’ecosistema della zona di esclusione mostrava un’insolita rinascita, con il ritorno di numerosi animali selvatici.
-		    Tuttavia, persistevano rischi ambientali, soprattutto legati agli incendi.
-		    L’area era sorvegliata e studiata da scienziati, e attirava un crescente numero di turisti curiosi di vedere l’evoluzione post-disastro.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_20.jpg" alt="Immagine 20">
-          <div class="slide-text">
-            <h3>Immagine 20</h3>
-            <p>Nel 2017, il bacino di raffreddamento della centrale nucleare di Chernobyl era in fase avanzata di disattivazione.
-		    Dopo l'interruzione del pompaggio nel 2014, il livello dell'acqua si era abbassato, esponendo i sedimenti contaminati.
-		    Studi ambientali indicavano che la radioattività nelle acque era in diminuzione, grazie alla deposizione dei contaminanti nei sedimenti. 
-		    Tuttavia, c'erano preoccupazioni per la possibile risospensione dei radionuclidi e la loro migrazione nelle acque sotterranee.
-		    Con monitoraggi e misure adeguate, i rischi risultavano gestibili.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_21.jpg" alt="Immagine 21">
-          <div class="slide-text">
-            <h3>Immagine 21</h3>
-            <p>Il bacino di raffreddamento di Chernobyl, ancora contaminato da isotopi radioattivi, ha visto una riduzione del flusso d’acqua a causa delle dighe, 
-		    con alcune aree in secca. Nonostante la contaminazione, la vegetazione palustre e acquatica ha prosperato, adattando l’ecosistema locale,
-		    che sta recuperando ma con una biodiversità alterata.</p>
-          </div>
-        </div>
-		
-		<div class="slide">
-          <img src="img/chernobyl_22.jpg" alt="Immagine 22">
-          <div class="slide-text">
-            <h3>Immagine 22</h3>
-            <p>Nel 2025, Chernobyl è una foresta viva e complessa. La vegetazione ha invaso gli spazi umani,
-		    creando un ecosistema selvaggio e resiliente. Specie adattate crescono rigogliose,
-		    stabilizzando il suolo e contribuendo alla biodiversità. È un esempio unico di rinascita naturale in un ambiente post-catastrofe nucleare.
-	    </p>
-          </div>
-        </div>
-		
-		
+<!-- Sezione 4: Mappa interattiva -->
+<section>
+  <h2>Mappa di Chernobyl</h2>
+  <div id="map" style="height: 400px;"></div>
+</section>
 
-      </div>
+<footer>
+  <p>Creato da Andrea Todeschini, Tommaso Mirandola, Riccardo Sartorelli • 2025</p>
+</footer>
 
-      <!-- Pulsanti per navigare tra le immagini -->
-      <div class="nav-buttons">
-        <button onclick="changeSlide(-1)">⬅️ Indietro</button>
-        <button onclick="changeSlide(1)">Avanti ➡️</button>
-      </div>
-    </div>
-  </section>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([51.2769, 30.2218], 10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  L.marker([51.3890, 30.0999]).addTo(map)
+    .bindPopup("Centrale Nucleare di Chernobyl")
+    .openPopup();
+</script>
 
-  <!-- Mappa interattiva -->
-  <section>
-    <h2>🗺️ Mappa di Chernobyl</h2>
-    <div id="map"></div>
-  </section>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
 
-  <!-- Footer -->
-  <footer>
-    <p>Creato da Andrea Todeschini Tommaso Mirandola Riccardo Sartorelli • 2025</p>
-  </footer>
+  header, section, footer {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
 
-  <!-- Aggiungiamo i JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    let currentIndex = 0;
+  h2 {
+    margin-top: 2em;
+  }
 
-    // Funzione per caricare la slide
-    function loadSlide(index) {
-      const slides = document.querySelectorAll('.slide');
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1em;
+  }
+
+  .gallery img {
+    width: calc(33.333% - 10px);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .gallery img {
+      width: 100%;
     }
-
-    // Funzione per cambiare le immagini
-    function changeSlide(direction) {
-      const slides = document.querySelectorAll('.slide');
-      currentIndex = (currentIndex + direction + slides.length) % slides.length;
-      loadSlide(currentIndex);
-    }
-
-    // Carica la prima immagine
-    window.onload = () => loadSlide(currentIndex);
-
-    // Mappa interattiva di Chernobyl
-    const map = L.map('map').setView([51.2769, 30.2218], 10);  // Posizione di Chernobyl
-
-    // Aggiungere la mappa
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Aggiungere un pin sulla centrale nucleare di Chernobyl
-    L.marker([51.3890, 30.0999]).addTo(map)
-      .bindPopup("<b>Centrali Nucleare di Chernobyl</b>")
-      .openPopup();
-  </script>
+  }
+</style>
 
 </body>
 </html>
