@@ -48,46 +48,56 @@ h2 {
   color: #555;
 }
 
+.slider {
+  text-align: center; /* per centrare tutto inline */
+}
+
+.slide {
+  display: none;
+  margin-bottom: 10px; /* spazio sotto l'immagine */
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.description {
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+/* Stile bottoni sotto l'immagine */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  background-color: #e3e9f3;  /* chiaro e soft */
-  border-radius: 50%;
-  border: 2px solid #357ABD;  /* bordo blu delicato */
-  box-shadow: 0 2px 6px rgba(53, 122, 189, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  margin: 0 10px; /* spazio orizzontale tra i bottoni */
+  background-color: #357ABD;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(53, 122, 189, 0.4);
+  transition: background-color 0.3s ease;
   user-select: none;
 }
 
-.prev {
-  left: 15px;
-}
-
-.next {
-  right: 15px;
-}
-
 .prev:hover, .next:hover {
-  background-color: #357ABD;    /* blu pieno */
-  border-color: #255a99;
-  box-shadow: 0 4px 12px rgba(37, 90, 153, 0.5);
+  background-color: #255a99;
 }
 
-.prev:hover svg, .next:hover svg {
-  stroke: white;
-}
-
-.prev svg, .next svg {
-  stroke: #357ABD;  /* colore freccia blu */
-  transition: stroke 0.3s ease;
-}
 
 
 /* Nascondi vecchie gallery */
