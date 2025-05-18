@@ -9,6 +9,7 @@ header, section, footer {
   padding: 20px;
   margin: 0 auto;
   max-width: 900px;
+  border-bottom: 1px solid #ddd; /* divisione tra le sezioni */
 }
 
 h2 {
@@ -17,13 +18,13 @@ h2 {
 
 /* Slider base */
 .slider {
-  position: relative;
   max-width: 600px;
   margin: 20px auto 40px;
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 8px;
   background: #fafafa;
+  text-align: center; /* per centrare bottoni sotto */
 }
 
 .slide {
@@ -48,33 +49,26 @@ h2 {
   color: #555;
 }
 
+/* Bottoni sotto le immagini, non assoluti */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 40px;
+  display: inline-block;
+  width: 50px;
   height: 40px;
-  margin-top: -20px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
+  margin: 15px 10px 0 10px;
+  background-color: #357ABD;
   border: none;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  user-select: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(53, 122, 189, 0.4);
   transition: background-color 0.3s ease;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+  user-select: none;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #255a99;
 }
 
 /* Nascondi vecchie gallery */
