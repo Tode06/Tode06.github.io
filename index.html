@@ -1,128 +1,68 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Progetto Chernobyl - Sezioni con Slider</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetto Chernobyl - Evoluzione post-incidente</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header, section {
-      padding: 20px;
-    }
-    section {
-      border-bottom: 1px solid #ddd;
-    }
-    .slider-container {
-      position: relative;
-      max-width: 600px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .slide {
-      display: none;
-      text-align: center;
-    }
-    .slide.active {
-      display: block;
-    }
-    .slide img {
-      width: 100%;
-      height: auto;
-    }
-    .nav-buttons {
-      text-align: center;
-      margin: 10px;
-    }
-    .nav-buttons button {
-      padding: 8px 16px;
-      margin: 0 5px;
-      cursor: pointer;
-    }
-    #map {
-      height: 400px;
-      width: 100%;
-    }
-    h2 {
-      margin-top: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <header>
   <h1>Progetto Chernobyl</h1>
-  <p>Analisi dell'incidente, degli effetti ambientali e visualizzazione su mappa.</p>
+  <p>Evoluzione ambientale e storica post-incidente</p>
 </header>
 
-<!-- Sezione 1: Incidente -->
+<!-- Sezione 1: Spiegazione dell'incidente -->
 <section>
-  <h2>Incidente di Chernobyl</h2>
-  <p>Il disastro nucleare di Chernobyl avvenne il 26 aprile 1986 presso la centrale nucleare Vladimir Il'ič Lenin. Durante un test di sicurezza, il reattore 4 esplose, rilasciando enormi quantità di radiazioni nell’atmosfera.</p>
-  <div class="slider-container" data-slider="1">
-    <div class="slide active"><img src="img/incidente_1.jpg" alt="Incidente 1"><p>Esplosione del reattore 4 nella notte dell’incidente.</p></div>
-    <div class="slide"><img src="img/incidente_2.jpg" alt="Incidente 2"><p>Squadre di emergenza al lavoro nei giorni successivi.</p></div>
-    <div class="nav-buttons">
-      <button onclick="changeSlide(-1, 1)">Indietro</button>
-      <button onclick="changeSlide(1, 1)">Avanti</button>
-    </div>
+  <h2>Spiegazione dell'incidente</h2>
+  <p>Il disastro di Chernobyl avvenne il 26 aprile 1986 presso il reattore 4 della centrale nucleare. Una serie di errori umani e problemi strutturali causarono un'esplosione che liberò una grande quantità di materiale radioattivo nell'atmosfera.</p>
+  <div class="gallery">
+    <img src="img/chernobyl_1.jpg" alt="4 giorni prima dell'incidente">
+    <img src="img/chernobyl_3.jpg" alt="3 giorni dopo l'incidente">
   </div>
 </section>
 
-<!-- Sezione 2: Cambiamenti della Natura -->
+<!-- Sezione 2: Cambiamenti della natura nel tempo -->
 <section>
-  <h2>Cambiamenti della Natura</h2>
-  <p>Dopo il disastro, la natura nella zona di esclusione ha subito mutazioni sorprendenti. Alcune aree sono diventate rifugi per la fauna selvatica, mentre altre mostrano gli effetti delle radiazioni sull’ecosistema.</p>
-  <div class="slider-container" data-slider="2">
-    <div class="slide active"><img src="img/natura_1.jpg" alt="Natura 1"><p>Rinascita della fauna in aree isolate.</p></div>
-    <div class="slide"><img src="img/natura_2.jpg" alt="Natura 2"><p>Alberi deformati nelle zone più contaminate.</p></div>
-    <div class="nav-buttons">
-      <button onclick="changeSlide(-1, 2)">Indietro</button>
-      <button onclick="changeSlide(1, 2)">Avanti</button>
-    </div>
+  <h2>Cambiamenti nella natura nel tempo</h2>
+  <p>La flora e la fauna della zona di esclusione hanno subito gravi danni iniziali, seguiti da una lenta ma sorprendente rigenerazione negli anni.</p>
+  <div class="gallery">
+    <img src="img/chernobyl_5.jpg" alt="1986 - Devastazione vegetazione">
+    <img src="img/chernobyl_7.jpg" alt="1987 - Muschi e felci resistenti">
+    <img src="img/chernobyl_13.jpg" alt="1991 - Segnali di rigenerazione">
+    <img src="img/chernobyl_16.jpg" alt="2000 - Ripresa della biodiversità">
+    <img src="img/chernobyl_18.jpg" alt="2013 - Ecosistema selvaggio">
+    <img src="img/chernobyl_22.jpg" alt="2025 - Foresta complessa e viva">
   </div>
 </section>
 
-<!-- Sezione 3: Bacino vicino al reattore -->
+<!-- Sezione 3: Il bacino vicino al reattore -->
 <section>
-  <h2>Bacino vicino al Reattore</h2>
-  <p>Il bacino di raffreddamento situato vicino alla centrale aveva lo scopo di raffreddare i reattori. Dopo l’incidente, è divenuto una zona altamente contaminata, ma ora ospita forme di vita resistenti alla radiazione.</p>
-  <div class="slider-container" data-slider="3">
-    <div class="slide active"><img src="img/bacino_1.jpg" alt="Bacino 1"><p>Vista del bacino nei primi anni dopo il disastro.</p></div>
-    <div class="slide"><img src="img/bacino_2.jpg" alt="Bacino 2"><p>Condizioni attuali del bacino e della vegetazione circostante.</p></div>
-    <div class="nav-buttons">
-      <button onclick="changeSlide(-1, 3)">Indietro</button>
-      <button onclick="changeSlide(1, 3)">Avanti</button>
-    </div>
+  <h2>Il bacino vicino al reattore</h2>
+  <p>Il bacino di raffreddamento ha subito contaminazioni pesanti, ma ha anche mostrato adattamenti ecologici significativi nel tempo.</p>
+  <div class="gallery">
+    <img src="img/chernobyl_14.jpg" alt="1993 - Deformazioni nella fauna acquatica">
+    <img src="img/chernobyl_15.jpg" alt="2000 - Segni di recupero">
+    <img src="img/chernobyl_17.jpg" alt="2013 - Abbassamento del livello dell'acqua">
+    <img src="img/chernobyl_20.jpg" alt="2017 - Rischio risospensione contaminanti">
+    <img src="img/chernobyl_21.jpg" alt="Recupero vegetazione acquatica">
   </div>
 </section>
 
-<!-- Sezione 4: Mappa -->
+<!-- Sezione 4: Mappa interattiva -->
 <section>
-  <h2>Mappa Interattiva di Chernobyl</h2>
-  <p>La mappa mostra la posizione della centrale e delle aree circostanti, incluse Pripyat e la zona di esclusione.</p>
-  <div id="map"></div>
+  <h2>Mappa di Chernobyl</h2>
+  <div id="map" style="height: 400px;"></div>
 </section>
 
-<!-- Script -->
+<footer>
+  <p>Creato da Andrea Todeschini, Tommaso Mirandola, Riccardo Sartorelli • 2025</p>
+</footer>
+
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-  function changeSlide(direction, sliderId) {
-    const container = document.querySelector(`.slider-container[data-slider="${sliderId}"]`);
-    const slides = container.querySelectorAll('.slide');
-    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-    slides[activeIndex].classList.remove('active');
-    activeIndex = (activeIndex + direction + slides.length) % slides.length;
-    slides[activeIndex].classList.add('active');
-  }
-
-  // Mappa interattiva
   const map = L.map('map').setView([51.2769, 30.2218], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
@@ -131,6 +71,44 @@
     .bindPopup("Centrale Nucleare di Chernobyl")
     .openPopup();
 </script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  header, section, footer {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  h2 {
+    margin-top: 2em;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1em;
+  }
+
+  .gallery img {
+    width: calc(33.333% - 10px);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .gallery img {
+      width: 100%;
+    }
+  }
+</style>
 
 </body>
 </html>
