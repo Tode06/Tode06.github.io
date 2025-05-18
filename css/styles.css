@@ -7,7 +7,6 @@ body {
   color: #333;
 }
 
-/* Linea orizzontale sopra ogni sezione */
 section {
   position: relative;
   margin: 60px auto;
@@ -19,7 +18,6 @@ section {
   border-left: 10px solid #357ABD;
 }
 
-/* Linea orizzontale sopra la sezione */
 section::before {
   content: "";
   position: absolute;
@@ -31,7 +29,6 @@ section::before {
   border-radius: 4px 4px 0 0;
 }
 
-/* Header con bordo più scuro */
 header {
   max-width: 900px;
   margin: 40px auto 20px;
@@ -60,9 +57,8 @@ p {
   color: #555;
 }
 
-/* Slider */
 .slider {
-  max-width: 600px;
+  max-width: 800px;      /* aumentato da 600px a 800px */
   margin: 30px auto 10px;
   background: #f0f4f8;
   padding: 15px;
@@ -82,6 +78,7 @@ p {
 .slide img {
   width: 100%;
   height: auto;
+  max-height: 450px;      /* altezza max immagine */
   border-radius: 8px;
   box-shadow: 0 3px 8px rgb(53 122 189 / 0.3);
   margin-bottom: 10px;
@@ -94,7 +91,6 @@ p {
   font-size: 0.95em;
 }
 
-/* Bottoni slider */
 .prev, .next {
   cursor: pointer;
   background-color: #357ABD;
@@ -116,29 +112,11 @@ p {
   transform: scale(1.1);
 }
 
-/* Footer */
 footer {
   max-width: 900px;
   margin: 60px auto 40px;
   padding: 15px 30px;
   text-align: center;
   font-size: 0.9em;
-  color: #888;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
-  border-left: 10px solid #357ABD;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header, section, footer {
-    margin: 20px 15px;
-    padding: 15px 20px;
-  }
-
-  .slider {
-    max-width: 100%;
-    padding: 10px;
-  }
+  color: #666;
 }
